@@ -20,8 +20,8 @@
 
   const removeTask = (taskIndex) => {
     tasks.splice(taskIndex, 1);
-        
-        render();
+
+    render();
   };
 
   const toggleTaskDone = (taskIndex) => {
@@ -29,7 +29,7 @@
 
     render();
   };
-  
+
   const bindEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -56,9 +56,9 @@
             <li
             ${task.done ? " style=\"text-decoration: line-through\"" : ""}
             >
-            <button class="js-done">zrobione?</button>
-            <button class="js-remove">usuń</button>
+            <button class="form__button js-done">${task.done ? "✔️" : ""}</button>
             ${task.content}
+            <button class="form__button js-remove">🗑</button>
             </li>
             `
     };
@@ -72,7 +72,7 @@
     event.preventDefault();
 
     const newTaskContent = document.querySelector(".js-newTask").value.trim();
-    
+
     if (newTaskContent === "") {
       return;
     }

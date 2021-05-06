@@ -58,13 +58,15 @@
 
     for (const task of tasks) {
       htmlString += `
-            <li
+            <div class="taskList__item">
+            <button class="taskList__button js-done">${task.done ? "✔️" : ""}</button>
+            <li class="taskList__content"
             ${task.done ? " style=\"text-decoration: line-through\"" : ""}
             >
-            <button class="form__button js-done">${task.done ? "✔️" : ""}</button>
             ${task.content}
-            <button class="form__button js-remove">🗑</button>
             </li>
+            <button class="taskList__button js-remove">🗑</button>
+            </div>
             `
     };
 

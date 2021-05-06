@@ -1,0 +1,29 @@
+.taskList {
+    border: 1px solid blue;
+    padding: 10px;
+}
+
+.taskList__list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.taskList__item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
+
+.taskList__content {
+    flex-grow: 1;
+    padding: 5px 10px;
+}
+
+.taskList__button {
+    flex-basis: 38px;
+    height: 38px;
+    background-color: transparent;
+    flex-shrink: 0;
+}
+

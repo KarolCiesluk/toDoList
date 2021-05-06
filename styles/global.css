@@ -5,3 +5,10 @@ html {
 *, ::before, ::after {
     box-sizing: inherit;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}

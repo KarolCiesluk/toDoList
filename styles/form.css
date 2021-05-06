@@ -1,5 +1,19 @@
+.form {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.form__container {
+    display: flex;
+    gap: 4px;
+}
+
+.form__input {
+    flex-grow: 3;
+    padding: 8px;
+}
+
 .form__button {
-    width: 34px;
-    height: 26px;
-    text-align: center;
+    flex-grow: 1;
+    padding: 8px;
 }

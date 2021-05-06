@@ -19,6 +19,7 @@
 .form__input {
     flex-grow: 3;
     padding: 8px;
+    border: 2px solid #c5c5c5;
 }
 
 .form__input:focus {
@@ -30,6 +31,7 @@
     background-color: #FF8749;
     border: none;
     color: white;
+    font-weight: bold;
 }
 
 .form__button:hover {

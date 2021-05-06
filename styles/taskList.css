@@ -3,24 +3,24 @@
 }
 
 .taskList__heading {
-    border: 1px solid grey;
     margin: 0;
     padding: 12px;
     background-color: white;
+    box-shadow: 0px 0px 5px 3px #F2F2F2;
 }
 
 .taskList__list {
     margin: 3px 0;
     padding: 20px 10px;
     list-style-type: none;
-    border: 1px solid grey;
     background-color: white;
+    box-shadow: 0px 0px 5px 3px #F2F2F2;
 }
 
 .taskList__item {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #c5c5c5;
     padding: 10px 12px;
 }
 
@@ -38,5 +38,5 @@
 }
 
 .taskList__button--done {
-    background-color: #D5E6E0;
+    border: 2px solid #4EBE59;
 }

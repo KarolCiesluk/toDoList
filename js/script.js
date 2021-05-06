@@ -30,6 +30,11 @@
     render();
   };
 
+  const resetInput = (newTaskElement) => {
+    newTaskElement.value = "";
+    newTaskElement.focus();
+  };
+
   const bindEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -71,13 +76,15 @@
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    const newTaskContent = document.querySelector(".js-newTask").value.trim();
+    const newTaskElement = document.querySelector(".js-newTask");
+    const newTaskContent = newTaskElement.value.trim();
 
     if (newTaskContent === "") {
       return;
     }
 
     addNewTask(newTaskContent);
+    resetInput(newTaskElement);
   };
 
   const init = () => {

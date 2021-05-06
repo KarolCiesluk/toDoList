@@ -21,9 +21,22 @@
     padding: 8px;
 }
 
+.form__input:focus {
+    outline-color: #FF8749;
+}
+
 .form__button {
     flex-grow: 1;
     background-color: #FF8749;
     border: none;
     color: white;
+}
+
+.form__button:hover {
+    background-color: #ff7029;
+}
+
+.form__button:focus {
+    outline: none;
+    background-color: rgb(255, 112, 41);
 }

@@ -41,3 +41,21 @@
 .taskList__button--done {
     border: 2px solid #4EBE59;
 }
+
+.taskList__button--done:hover {
+    background-color: #d5ffda;
+}
+
+.taskList__button--done:focus {
+    outline: none;
+    background-color: #d5ffda;
+}
+
+.taskList__button--remove:hover {
+    background-color: rgb(255, 206, 206);
+}
+
+.taskList__button--remove:focus {
+    outline: none;
+    background-color: rgb(255, 206, 206);
+}

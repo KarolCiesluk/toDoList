@@ -65,7 +65,7 @@
             >
             ${task.content}
             </li>
-            <button class="taskList__button taskList__button--remove js-remove">🗑</button>
+            <button class="taskList__button js-remove">🗑</button>
             </div>
             `
     };

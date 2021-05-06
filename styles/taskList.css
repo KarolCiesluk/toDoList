@@ -34,13 +34,9 @@
     height: 38px;
     background-color: transparent;
     flex-shrink: 0;
+    border: none;
 }
 
 .taskList__button--done {
     background-color: #D5E6E0;
-    border: 1px solid #008080;
-}
-
-.taskList__button--remove {
-    border: none;
 }

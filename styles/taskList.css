@@ -5,11 +5,11 @@
 .taskList__heading {
     border: 1px solid grey;
     margin: 0;
-    padding: 10px;
+    padding: 12px;
 }
 
 .taskList__list {
-    margin: 6px 0;
+    margin: 5px 0;
     padding: 20px 10px;
     list-style-type: none;
     border: 1px solid black;
@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid grey;
-    padding: 10px 10px;
+    padding: 10px 12px;
 }
 
 .taskList__content {
@@ -35,7 +35,8 @@
 }
 
 .taskList__button--done {
-    background-color: #b4dfd3;
+    background-color: #D5E6E0;
+    border: 1px solid #008080;
 }
 
 .taskList__button--remove {

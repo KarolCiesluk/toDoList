@@ -37,12 +37,13 @@
 .taskList__button {
     max-width: 30px;
     height: 30px;
-    text-align: center;
     background-color: green;
     flex-shrink: 0;
     border: none;
     color: white;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .taskList__button:hover {

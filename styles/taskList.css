@@ -35,14 +35,13 @@
 }
 
 .taskList__button {
+    flex-basis: 30px;
+    height: 30px;
     background-color: green;
     flex-shrink: 0;
     border: none;
     color: white;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 21px;
 }
 
 .taskList__button:hover {

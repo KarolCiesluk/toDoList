@@ -49,15 +49,15 @@
 
     for (const task of tasks) {
       htmlString += `
-            <div class="taskList__item">
-            <button class="taskList__button js-done">${task.done ? "&check;" : ""}</button>
-            <li class="taskList__content${task.done ? " taskList__content--done" : ""}"
-            >
-            ${task.content}
-            </li>
-            <button class="taskList__button taskList__button--remove js-remove">🗑</button>
-            </div>
-            `
+        <div class="taskList__item">
+        <button class="taskList__button js-done">${task.done ? "&check;" : ""}</button>
+        <li class="taskList__content${task.done ? " taskList__content--done" : ""}"
+        >
+        ${task.content}
+        </li>
+        <button class="taskList__button taskList__button--remove js-remove">🗑</button>
+        </div>
+        `
     };
 
     document.querySelector(".js-tasks").innerHTML = htmlString;

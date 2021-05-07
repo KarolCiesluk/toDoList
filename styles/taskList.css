@@ -21,6 +21,7 @@
 .taskList__item {
     display: flex;
     align-items: center;
+    word-break: break-word;
     border-bottom: 1px solid #c5c5c5;
     padding: 10px 12px;
 }

@@ -31,31 +31,31 @@
 }
 
 .taskList__button {
-    flex-basis: 37px;
-    height: 37px;
-    background-color: transparent;
+    flex-basis: 30px;
+    height: 30px;
+    background-color: green;
     flex-shrink: 0;
     border: none;
+    color: white;
 }
 
 .taskList__button:hover {
-    background-color: #d5ffda;
+    background-color: #00b300;
     cursor: pointer;
 }
 
 .taskList__button:focus {
     outline: none;
-    background-color: #d5ffda;
+    background-color: #00b300;
 }
 
-.taskList__button--done {
-    border: 2px solid #4EBE59;
+.taskList__button--remove {
+    background-color: transparent;
 }
-
 .taskList__button--remove:hover {
-    background-color: rgb(255, 206, 206);
+    background-color: #ff8080;
 }
 
 .taskList__button--remove:focus {
-    background-color: rgb(255, 206, 206);
+    background-color: #ff8080;
 }

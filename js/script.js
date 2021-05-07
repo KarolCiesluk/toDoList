@@ -51,8 +51,7 @@
       htmlString += `
             <div class="taskList__item">
             <button class="taskList__button js-done">${task.done ? "&check;" : ""}</button>
-            <li class="taskList__content"
-            ${task.done ? " style=\"text-decoration: line-through\"" : ""}
+            <li class="taskList__content${task.done ? " taskList__content--done" : ""}"
             >
             ${task.content}
             </li>

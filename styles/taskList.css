@@ -39,6 +39,7 @@
     flex-shrink: 0;
     border: none;
     color: white;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -37,6 +37,7 @@
 .taskList__button {
     max-width: 30px;
     height: 30px;
+    padding: 0;
     background-color: green;
     flex-shrink: 0;
     border: none;

@@ -31,24 +31,25 @@
 }
 
 .taskList__button {
-    flex-basis: 38px;
-    height: 38px;
+    flex-basis: 37px;
+    height: 37px;
     background-color: transparent;
     flex-shrink: 0;
     border: none;
 }
 
-.taskList__button--done {
-    border: 2px solid #4EBE59;
-}
-
-.taskList__button--done:hover {
+.taskList__button:hover {
     background-color: #d5ffda;
+    cursor: pointer;
 }
 
-.taskList__button--done:focus {
+.taskList__button:focus {
     outline: none;
     background-color: #d5ffda;
+}
+
+.taskList__button--done {
+    border: 2px solid #4EBE59;
 }
 
 .taskList__button--remove:hover {
@@ -56,6 +57,5 @@
 }
 
 .taskList__button--remove:focus {
-    outline: none;
     background-color: rgb(255, 206, 206);
 }

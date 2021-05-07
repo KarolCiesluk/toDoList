@@ -1,5 +1,5 @@
 # To Do List
-![app logo](images/readmeImage.png)
+![app logo](images/readmeImage1.png)
 
 ## Table of Contents
 1. [General info](#general-info)

@@ -20,4 +20,3 @@ https://karolciesluk.github.io/toDoList/
 - CSS
     - Flexbox
     - BEM
-

@@ -50,8 +50,11 @@
 }
 
 .taskList__button--remove {
-    background-color: transparent;
+    color: transparent;
+    text-shadow: 0 0 0 white;
+    background-color: red;
 }
+
 .taskList__button--remove:hover {
     background-color: #ff8080;
 }

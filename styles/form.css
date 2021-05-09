@@ -8,11 +8,16 @@
 }
 
 .form__input {
-    flex-basis: 320px;
-    flex-grow: 3;
+    flex-grow: 1;
     margin: 4px;
     padding: 8px;
     border: 2px solid #c5c5c5;
+}
+
+@media (max-width: 470px) {
+    .form__input {
+        flex-basis: 400px;
+    }
 }
 
 .form__input:focus {
@@ -20,12 +25,18 @@
 }
 
 .form__button {
-    flex-grow: 1;
+    flex-basis: 150px;
     min-height: 38px;
     margin: 4px;
     background-color: teal;
     border: none;
     color: white;
+}
+
+@media (max-width: 470px) {
+    .form__button {
+        flex-grow: 1;
+    }
 }
 
 .form__button:hover {

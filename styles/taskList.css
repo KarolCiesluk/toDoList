@@ -63,7 +63,7 @@
     color: transparent;
     text-shadow: 0 0 0 white;
     background-color: red;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .taskList__button--remove:hover {

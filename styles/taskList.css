@@ -44,7 +44,7 @@
     border: none;
     color: white;
     font-size: 14px;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }

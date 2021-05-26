@@ -12,9 +12,7 @@
 
   const toggleTaskDone = (taskIndex) => {
     // tasks[taskIndex].done = !tasks[taskIndex].done; // immutability required
-    console.log(tasks);
     tasks[taskIndex] = { ...tasks[taskIndex], done: tasks[taskIndex].done === true ? false : true };
-    console.log(tasks);
     render();
   };
 

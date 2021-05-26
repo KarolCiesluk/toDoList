@@ -1,8 +1,12 @@
 {
-  const tasks = [];
+  let tasks = []; // changed const to let
 
   const removeTask = (taskIndex) => {
-    tasks.splice(taskIndex, 1);
+    // tasks.splice(taskIndex, 1); // immutability required
+    tasks = [
+      ...tasks.slice(0, taskIndex),
+      ...tasks.slice(taskIndex + 1),
+    ];
     render();
   };
 
@@ -12,7 +16,11 @@
   };
 
   const addNewTask = (newTaskContent) => {
-    tasks.push({ content: newTaskContent });
+    // tasks.push({ content: newTaskContent }); // immutability required
+    tasks = [
+      ...tasks,
+      {content: newTaskContent},
+    ];
     render();
   };
 
@@ -71,7 +79,7 @@
 
     if (newTaskContent !== "") {
       addNewTask(newTaskContent);
-      newTaskElement.value = "";
+      newTaskElement.value = ""; // immutability required???
     }
 
     newTaskElement.focus();

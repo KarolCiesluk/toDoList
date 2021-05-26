@@ -1,41 +1,33 @@
 {
   const tasks = [];
 
-  const addNewTask = (newTaskContent) => {
-    tasks.push({
-      content: newTaskContent,
-    });
-
-    render();
-  };
-
   const removeTask = (taskIndex) => {
     tasks.splice(taskIndex, 1);
-
     render();
   };
 
   const toggleTaskDone = (taskIndex) => {
     tasks[taskIndex].done = !tasks[taskIndex].done;
-
     render();
   };
 
-  const resetInput = (newTaskElement) => {
-    newTaskElement.value = "";
-    newTaskElement.focus();
+  const addNewTask = (newTaskContent) => {
+    tasks.push({ content: newTaskContent });
+    render();
   };
 
-  const bindEvents = () => {
+  const bindRemoveEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
-    removeButtons.forEach((removeButton, index) => {
+    removeButtons.forEach((removeButton, taskIndex) => {
       removeButton.addEventListener("click", () => {
-        removeTask(index);
+        removeTask(taskIndex);
       });
     });
+  };
 
-    const toggleDoneButtons = document.querySelectorAll(".js-done");
+  const bindToggleDoneEvents = () => {
+    const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
 
     toggleDoneButtons.forEach((toggleDoneButton, index) => {
       toggleDoneButton.addEventListener("click", () => {
@@ -45,27 +37,30 @@
   };
 
   const render = () => {
-    let htmlString = "";
+    let tasksListHTMLContent = "";
 
     for (const task of tasks) {
-      htmlString += `
-        <div class="taskList__item">
-          <button class="taskList__button js-done">
-          ${task.done ? "&check;" : ""}
+      tasksListHTMLContent += `
+        <li
+          class="tasks__item js-task"
+        >
+          <button class="tasks__button tasks__button--toggleDone js-toggleDone">
+            ${task.done ? "&check;" : ""}
           </button>
-          <li class="taskList__content${task.done ? " taskList__content--done" : ""}">
-          ${task.content}
-          </li>
-          <button class="taskList__button taskList__button--remove js-remove">
-          🗑
+          <span class="tasks__content ${task.done ? "tasks__content--done" : ""}">
+            ${task.content}
+          </span>
+          <button class="tasks__button tasks__button--remove js-remove">
+            🗑️
           </button>
-        </div>
-        `
-    };
+        </li>
+      `;
+    }
 
-    document.querySelector(".js-tasks").innerHTML = htmlString;
+    document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
 
-    bindEvents();
+    bindRemoveEvents();
+    bindToggleDoneEvents();
   };
 
   const onFormSubmit = (event) => {
@@ -74,17 +69,16 @@
     const newTaskElement = document.querySelector(".js-newTask");
     const newTaskContent = newTaskElement.value.trim();
 
-    if (newTaskContent === "") {
-      return;
+    if (newTaskContent !== "") {
+      addNewTask(newTaskContent);
+      newTaskElement.value = "";
     }
 
-    addNewTask(newTaskContent);
-    resetInput(newTaskElement);
+    newTaskElement.focus();
   };
 
   const init = () => {
     const form = document.querySelector(".js-form");
-
     form.addEventListener("submit", onFormSubmit);
   };
 

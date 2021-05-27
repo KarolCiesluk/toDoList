@@ -45,7 +45,7 @@
     });
   };
 
-  const render = () => {
+  const renderTasks = () => {
     let tasksListHTMLContent = "";
 
     for (const task of tasks) {
@@ -67,9 +67,19 @@
     }
 
     document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
+  }; // write code here
+
+  const renderButtons = () => {}; // write code here
+
+  const bindButtonsEvents = () => {}; // napisz listenery do przycisków
+
+  const render = () => {
+    renderTasks();
+    renderButtons();
 
     bindRemoveEvents();
     bindToggleDoneEvents();
+    bindButtonsEvents();
   };
 
   const onFormSubmit = (event) => {

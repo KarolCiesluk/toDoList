@@ -1,3 +1,4 @@
+// 4:39 module 07.07
 {
   let tasks = []; // changed const to let
 
@@ -17,7 +18,10 @@
   const toggleTaskDone = (taskIndex) => {
     // tasks[taskIndex].done = !tasks[taskIndex].done; // immutability required
     // tasks = tasks.map(...) hint from Krzysiek
-    tasks[taskIndex] = { ...tasks[taskIndex], done: tasks[taskIndex].done ? false : true };
+
+    tasks = tasks.map((element, index) => index === taskIndex ? {...element, done: element.done ? false : true} : element);
+
+    // tasks[taskIndex] = { ...tasks[taskIndex], done: tasks[taskIndex].done ? false : true };
     render();
   };
 

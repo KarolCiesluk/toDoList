@@ -50,7 +50,7 @@
     for (const task of tasks) {
       tasksListHTMLContent += `
         <li
-          class="tasks__item ${hideDoneTasks ? "task__item--hiden" : ""} js-task" 
+          class="tasks__item ${hideDoneTasks ? "tasks__item--hiden" : ""} js-task" 
         >
           <button class="tasks__button tasks__button--toggleDone js-toggleDone">
             ${task.done ? "&check;" : ""}

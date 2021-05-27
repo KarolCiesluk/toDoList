@@ -1,7 +1,7 @@
 {
   let tasks = [];
 
-  let hideDoneTasks = false; // use it for hiding done tasks
+  let hideDoneTasks = false;
 
   const removeTask = (taskIndex) => {
     tasks = [
@@ -105,7 +105,7 @@
       toggleHideTasksButton.addEventListener("click", toggleHideTasks);
     }
 
-    if (doneAllButton && doneAllButton.disabled === false) {
+    if (doneAllButton && !doneAllButton.disabled) {
       doneAllButton.addEventListener("click", tickAllTasksDone);
     }
   };

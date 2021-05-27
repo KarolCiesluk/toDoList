@@ -50,13 +50,13 @@
     for (const task of tasks) {
       tasksListHTMLContent += `
         <li
-          class="tasks__item ${task.done ? hideDoneTasks ? "tasks__item--hiden" : "" : ""} js-task" 
+          class="tasks__item ${ task.done ? hideDoneTasks ? "tasks__item--hiden" : "" : "" } js-task" 
         >
           <button class="tasks__button tasks__button--toggleDone js-toggleDone">
-            ${task.done ? "&check;" : ""}
+            ${ task.done ? "&check;" : "" }
           </button>
-          <span class="tasks__content ${task.done ? "tasks__content--done" : ""}">
-            ${task.content}
+          <span class="tasks__content ${ task.done ? "tasks__content--done" : "" }">
+            ${ task.content }
           </span>
           <button class="tasks__button tasks__button--remove js-remove">
             🗑️
@@ -64,7 +64,7 @@
         </li>
       `;
     } /* task__item--hiden ukrywaj przyciski za pomocą css */
-
+    
     document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
   }; // zawsze renderuj wszystko niezależnie co się zmieni
 
@@ -74,7 +74,7 @@
     if (tasks.length) {
       taskListButtonsHTML = `
         <button class="js-toggleHideTasks">
-          ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+          ${ hideDoneTasks ? "Pokaż" : "Ukryj" } ukończone
         </button>
         <button class="js-doneAll" ${ tasks.every(({ done }) => done) ? "disabled" : "" }>
           Ukończ wszystkie
@@ -92,7 +92,7 @@
 
   const tickAllTasksDone = () => {
     tasks = tasks.map(task => {
-      return {...task, done: true};
+      return { ...task, done: true };
     });
     render();
   };

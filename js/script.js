@@ -84,7 +84,7 @@
       `;
     }
 
-    document.querySelector(".js-buttons").innerHTML = taskListButtonsHTML;
+    document.querySelector(".js-buttonsContainer").innerHTML = taskListButtonsHTML;
   }; // write code here; renderuje dwa przyciski; sklej HTMLA na podstawie danych tasks i hideDoneTasks i wrzucamy do elementy w którym te przyciski mają się znaleźć; wyłączony przysick za pomocą atrybutu disabled
 
   // const bindButtonsEvents = () => {}; // napisz listenery do przycisków; 

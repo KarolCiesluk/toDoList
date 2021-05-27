@@ -4,7 +4,6 @@
   let hideDoneTasks = false; // use it for hiding done tasks
 
   const removeTask = (taskIndex) => {
-    // tasks.splice(taskIndex, 1); // immutability required
     tasks = [
       ...tasks.slice(0, taskIndex),
       ...tasks.slice(taskIndex + 1),
@@ -15,15 +14,11 @@
   // const toggleAllTasksDone = () => {}; write code here (with map)
 
   const toggleTaskDone = (taskIndex) => {
-    // tasks[taskIndex].done = !tasks[taskIndex].done; // immutability required
-    // tasks = tasks.map(...) hint from Krzysiek
-
-    tasks = tasks.map((element, index) => index === taskIndex ? {...element, done: element.done ? false : true} : element);
+    tasks = tasks.map((element, index) => index === taskIndex ? { ...element, done: element.done ? false : true } : element);
     render();
   };
 
   const addNewTask = (newTaskContent) => {
-    // tasks.push({ content: newTaskContent }); // immutability required
     tasks = [
       ...tasks,
       { content: newTaskContent },
@@ -75,14 +70,26 @@
     document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
   }; // zawsze renderuj wszystko niezależnie co się zmieni
 
-  // const renderButtons = () => {}; // write code here; renderuje dwa przyciski; sklej HTMLA na podstawie danych tasks i hideDoneTasks i wrzucamy do elementy w którym te przyciski mają się znaleźć; wyłączony przysick za pomocą atrybutu disabled
+  const renderButtons = () => {
+    let taskListButtonsHTML = "";
+
+    if (tasks) {
+      taskListButtonsHTML = `
+                                  <button>Ukryj ukończone</button>
+                                  <button>Ukończ wszystkie</button>
+                                `;
+    }
+
+
+    document.querySelector(".js-buttons").innerHTML = taskListButtonsHTML;
+  }; // write code here; renderuje dwa przyciski; sklej HTMLA na podstawie danych tasks i hideDoneTasks i wrzucamy do elementy w którym te przyciski mają się znaleźć; wyłączony przysick za pomocą atrybutu disabled
 
   // const bindButtonsEvents = () => {}; // napisz listenery do przycisków; 
-                                      // UWAGA! przysisku ukończ zad może nie być: potrzebny if przysisk się przypiął
+  // UWAGA! przysisku ukończ zad może nie być: potrzebny if przysisk się przypiął
 
   const render = () => {
     renderTasks();
-    // renderButtons();
+    renderButtons();
 
     bindRemoveEvents();
     bindToggleDoneEvents();

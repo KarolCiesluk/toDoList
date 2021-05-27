@@ -33,7 +33,7 @@
     background: none;
     color: teal;
     font-size: 16px;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 .section__button:hover {

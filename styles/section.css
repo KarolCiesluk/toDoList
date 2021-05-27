@@ -22,7 +22,6 @@
         grid-template-columns: 1fr;
         grid-gap: 32px;
     }
-
     .section__buttonsContainer {
         display: grid;
         grid-gap: 20px;

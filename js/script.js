@@ -1,6 +1,5 @@
-// 4:39 module 07.07
 {
-  let tasks = []; // changed const to let
+  let tasks = [];
 
   let hideDoneTasks = false; // use it for hiding done tasks
 
@@ -20,8 +19,6 @@
     // tasks = tasks.map(...) hint from Krzysiek
 
     tasks = tasks.map((element, index) => index === taskIndex ? {...element, done: element.done ? false : true} : element);
-
-    // tasks[taskIndex] = { ...tasks[taskIndex], done: tasks[taskIndex].done ? false : true };
     render();
   };
 
@@ -60,7 +57,7 @@
     for (const task of tasks) {
       tasksListHTMLContent += `
         <li
-          class="tasks__item js-task"
+          class="tasks__item js-task" 
         >
           <button class="tasks__button tasks__button--toggleDone js-toggleDone">
             ${task.done ? "&check;" : ""}
@@ -73,12 +70,12 @@
           </button>
         </li>
       `;
-    }
+    } /* task__item--hiden ukrywaj przyciski za pomocą css */
 
     document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
-  }; // write code here
+  }; // zawsze renderuj wszystko niezależnie co się zmieni
 
-  // const renderButtons = () => {}; // write code here; renderuje dwa przyciski
+  // const renderButtons = () => {}; // write code here; renderuje dwa przyciski; sklej HTMLA na podstawie danych tasks i hideDoneTasks i wrzucamy do elementy w którym te przyciski mają się znaleźć; wyłączony przysick za pomocą atrybutu disabled
 
   // const bindButtonsEvents = () => {}; // napisz listenery do przycisków; 
                                       // UWAGA! przysisku ukończ zad może nie być: potrzebny if przysisk się przypiął

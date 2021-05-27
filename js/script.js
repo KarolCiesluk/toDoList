@@ -1,6 +1,8 @@
 {
   let tasks = []; // changed const to let
 
+  let hideDoneTasks = false; // use it for hiding done tasks
+
   const removeTask = (taskIndex) => {
     // tasks.splice(taskIndex, 1); // immutability required
     tasks = [
@@ -10,8 +12,11 @@
     render();
   };
 
+  // const toggleAllTasksDone = () => {}; write code here (with map)
+
   const toggleTaskDone = (taskIndex) => {
     // tasks[taskIndex].done = !tasks[taskIndex].done; // immutability required
+    // tasks = tasks.map(...) hint from Krzysiek
     tasks[taskIndex] = { ...tasks[taskIndex], done: tasks[taskIndex].done ? false : true };
     render();
   };
@@ -69,17 +74,18 @@
     document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
   }; // write code here
 
-  const renderButtons = () => {}; // write code here
+  // const renderButtons = () => {}; // write code here; renderuje dwa przyciski
 
-  const bindButtonsEvents = () => {}; // napisz listenery do przycisków
+  // const bindButtonsEvents = () => {}; // napisz listenery do przycisków; 
+                                      // UWAGA! przysisku ukończ zad może nie być: potrzebny if przysisk się przypiął
 
   const render = () => {
     renderTasks();
-    renderButtons();
+    // renderButtons();
 
     bindRemoveEvents();
     bindToggleDoneEvents();
-    bindButtonsEvents();
+    // bindButtonsEvents();
   };
 
   const onFormSubmit = (event) => {

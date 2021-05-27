@@ -17,6 +17,38 @@
     align-items: center;
 }
 
+@media (max-width: 767px) {
+    .section__header--taskList {
+        grid-template-columns: 1fr;
+        grid-gap: 32px;
+    }
+
+    .section__buttonsContainer {
+        display: grid;
+        grid-gap: 20px;
+    }
+}
+
+.section__button {
+    border: none;
+    background: none;
+    color: teal;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.section__button:hover {
+    color: hsl(180, 100%, 30%);
+}
+
+.section__button:active {
+    color: hsl(180, 100%, 35%);
+}
+
+.section__button--doneAll:disabled {
+    color: #ddd;
+}
+
 .section__body {
     padding: 20px;
 }

@@ -75,10 +75,10 @@
 
     if (tasks.length) {
       taskListButtonsHTML = `
-        <button>
+        <button class="js-toggleHideTasks">
           ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
         </button>
-        <button ${ tasks.every(({ done }) => done) ? "disabled" : "" }>
+        <button class="js-doneAll" ${ tasks.every(({ done }) => done) ? "disabled" : "" }>
           Ukończ wszystkie
         </button>
       `;
@@ -87,7 +87,24 @@
     document.querySelector(".js-buttonsContainer").innerHTML = taskListButtonsHTML;
   }; // write code here; renderuje dwa przyciski; sklej HTMLA na podstawie danych tasks i hideDoneTasks i wrzucamy do elementy w którym te przyciski mają się znaleźć; wyłączony przysick za pomocą atrybutu disabled
 
-  // const bindButtonsEvents = () => {}; // napisz listenery do przycisków; 
+  const bindButtonsEvents = () => {
+    const toggleHideTasksButton = document.querySelector(".js-toggleHideTasks");
+    const doneAllButton = document.querySelector(".js-doneAll");
+
+    if (toggleHideTasksButton) {
+      toggleHideTasksButton.addEventListener("click", () => hideDoneTasks = !hideDoneTasks);
+    }
+
+    if (doneAllButton && doneAllButton.disabled === false) {
+      doneAllButton.addEventListener("click", () => {
+        tasks = tasks.map(task => {
+          return {...task, done: true};
+        });
+        render();
+      });
+    }
+    
+  }; // napisz listenery do przycisków; 
   // UWAGA! przysisku ukończ zad może nie być: potrzebny if przysisk się przypiął
 
   const render = () => {
@@ -96,7 +113,7 @@
 
     bindRemoveEvents();
     bindToggleDoneEvents();
-    // bindButtonsEvents();
+    bindButtonsEvents();
   };
 
   const onFormSubmit = (event) => {

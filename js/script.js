@@ -73,11 +73,15 @@
   const renderButtons = () => {
     let taskListButtonsHTML = "";
 
-    if (tasks) {
+    if (tasks.length > 0) {
       taskListButtonsHTML = `
-                                  <button>Ukryj ukończone</button>
-                                  <button>Ukończ wszystkie</button>
-                                `;
+        <button>
+          ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+        </button>
+        <button>
+          Ukończ wszystkie
+        </button>
+      `;
     }
 
 

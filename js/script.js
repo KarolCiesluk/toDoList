@@ -63,10 +63,10 @@
           </button>
         </li>
       `;
-    } /* task__item--hiden ukrywaj przyciski za pomocą css */
+    }
     
     document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
-  }; // zawsze renderuj wszystko niezależnie co się zmieni
+  };
 
   const renderButtons = () => {
     let taskListButtonsHTML = "";
@@ -127,7 +127,7 @@
 
     if (newTaskContent !== "") {
       addNewTask(newTaskContent);
-      newTaskElement.value = ""; // immutability required???
+      newTaskElement.value = "";
     }
 
     newTaskElement.focus();

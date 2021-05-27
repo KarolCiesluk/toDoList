@@ -50,7 +50,7 @@
     for (const task of tasks) {
       tasksListHTMLContent += `
         <li
-          class="tasks__item ${hideDoneTasks ? "tasks__item--hiden" : ""} js-task" 
+          class="tasks__item ${task.done ? hideDoneTasks ? "tasks__item--hiden" : "" : ""} js-task" 
         >
           <button class="tasks__button tasks__button--toggleDone js-toggleDone">
             ${task.done ? "&check;" : ""}
@@ -85,7 +85,10 @@
     document.querySelector(".js-buttonsContainer").innerHTML = taskListButtonsHTML;
   }; // write code here; renderuje dwa przyciski; sklej HTMLA na podstawie danych tasks i hideDoneTasks i wrzucamy do elementy w którym te przyciski mają się znaleźć; wyłączony przysick za pomocą atrybutu disabled
 
-  const toggleHideTasks = () => hideDoneTasks = !hideDoneTasks;
+  const toggleHideTasks = () => {
+    hideDoneTasks = !hideDoneTasks;
+    render();
+  };
 
   const tickAllTasksDone = () => {
     tasks = tasks.map(task => {

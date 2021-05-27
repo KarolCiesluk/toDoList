@@ -11,6 +11,12 @@
     border-bottom: 1px solid #ddd;
 }
 
+.section__header--taskList {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
 .section__body {
     padding: 20px;
 }

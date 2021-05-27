@@ -11,8 +11,6 @@
     render();
   };
 
-  // const toggleAllTasksDone = () => {}; write code here (with map)
-
   const toggleTaskDone = (taskIndex) => {
     tasks = tasks.map((element, index) => index === taskIndex ? { ...element, done: element.done ? false : true } : element);
     render();
@@ -52,7 +50,7 @@
     for (const task of tasks) {
       tasksListHTMLContent += `
         <li
-          class="tasks__item js-task" 
+          class="tasks__item ${hideDoneTasks ? "task__item--hiden" : ""} js-task" 
         >
           <button class="tasks__button tasks__button--toggleDone js-toggleDone">
             ${task.done ? "&check;" : ""}

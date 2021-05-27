@@ -32,7 +32,7 @@
     border: none;
     background: none;
     color: teal;
-    font-size: 16px;
+    font-size: initial;
     transition: color 0.3s;
 }
 

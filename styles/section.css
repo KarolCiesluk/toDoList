@@ -4,28 +4,34 @@
     box-shadow: 0 0 5px #ddd;
 }
 
-.section__header {
-    font-size: 20px;
-    padding: 20px;
-    margin: 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.section__header--taskList {
+.section__gridContainer {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
 }
 
 @media (max-width: 767px) {
-    .section__header--taskList {
+    .section__gridContainer {
         grid-template-columns: 1fr;
-        grid-gap: 32px;
+        grid-gap: 32px
     }
+    
     .section__buttonsContainer {
         display: grid;
         grid-gap: 20px;
     }
+}
+
+.section__header {
+    font-size: 20px;
+    padding: 20px;
+    margin: 0;
+}
+
+.section__header--taskList {
+    padding: 0;
 }
 
 .section__button {

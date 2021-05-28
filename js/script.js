@@ -105,7 +105,7 @@
       toggleHideTasksButton.addEventListener("click", toggleHideTasks);
     }
 
-    if (doneAllButton && !doneAllButton.disabled) {
+    if (doneAllButton) {
       doneAllButton.addEventListener("click", tickAllTasksDone);
     }
   };

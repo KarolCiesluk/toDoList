@@ -17,11 +17,6 @@
         grid-template-columns: 1fr;
         grid-gap: 32px
     }
-    
-    .section__buttonsContainer {
-        display: grid;
-        grid-gap: 20px;
-    }
 }
 
 .section__title {
@@ -34,26 +29,6 @@
 .section__title--taskList {
     padding: 0;
     border: none;
-}
-
-.section__button {
-    border: none;
-    background: none;
-    color: teal;
-    font-size: initial;
-    transition: color 0.3s;
-}
-
-.section__button:hover {
-    color: hsl(180, 100%, 30%);
-}
-
-.section__button:active {
-    color: hsl(180, 100%, 35%);
-}
-
-.section__button--doneAll:disabled {
-    color: #ddd;
 }
 
 .section__body {

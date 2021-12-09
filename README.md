@@ -2,7 +2,7 @@
 ![app logo](images/readmeImage1.png)
 
 ## Table of Contents
-1. [Demo](#demo) 
+1. [Demo](#demo)
 2. [General info](#general-info)
 3. [Technologies](#technologies)
 
@@ -10,7 +10,9 @@
 https://karolciesluk.github.io/toDoList/
 
 ## General info
-**To Do List** is an app that helps with organizing tasks. You may list as many tasks as you wish and tick boxes when they are done or remove them by clicking on the 🗑 button.
+**To Do List** is an app that helps with organizing tasks. This one is written in vanilla java script. It's a simpler version of my "to-do-list-react" app.
+
+You may list as many tasks as you wish and tick boxes when they are done or remove them by clicking on the 🗑 button.
 
 The app was made during my participation in the [YouCode](https://youcode.pl/frontend-developer/) frontend developer course.
 
@@ -20,4 +22,3 @@ The app was made during my participation in the [YouCode](https://youcode.pl/fro
 - CSS
     - Flexbox
     - BEM
-

@@ -10,7 +10,7 @@
 https://karolciesluk.github.io/toDoList/
 
 ## General info
-**To Do List** is an app that helps with organizing tasks. This one is written in vanilla java script. It's a simpler version of my "to-do-list-react" app.
+**To Do List** is an app that helps with organizing tasks. This one is written in vanilla java script and is a simpler version of my "to-do-list-react" app.
 
 You may list as many tasks as you wish and tick boxes when they are done or remove them by clicking on the 🗑 button.
 
